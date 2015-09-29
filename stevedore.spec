@@ -4,7 +4,7 @@
 #
 Name     : stevedore
 Version  : 1.8.0
-Release  : 13
+Release  : 14
 URL      : http://tarballs.openstack.org/stevedore/stevedore-1.8.0.tar.gz
 Source0  : http://tarballs.openstack.org/stevedore/stevedore-1.8.0.tar.gz
 Summary  : Manage dynamic plugins for Python applications
@@ -21,6 +21,7 @@ BuildRequires : docutils-python
 BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : fixtures-python
+BuildRequires : funcsigs-python
 BuildRequires : linecache2-python
 BuildRequires : markupsafe-python
 BuildRequires : mox3-python
@@ -57,6 +58,7 @@ stevedore -- Manage dynamic plugins for Python applications
 %package python
 Summary: python components for the stevedore package.
 Group: Default
+Requires: six-python
 
 %description python
 python components for the stevedore package.
