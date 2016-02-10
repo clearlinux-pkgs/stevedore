@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+1.11.0
+------
+
+* Updated from global requirements
+* Trival:Remove unused logging import
+* Remove work around for NullHandler
+* remove unnecessary dependency on argparse
+
 1.10.0
 ------
 
