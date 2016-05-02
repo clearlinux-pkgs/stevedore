@@ -4,7 +4,7 @@
 #
 Name     : stevedore
 Version  : 1.12.0
-Release  : 22
+Release  : 23
 URL      : http://tarballs.openstack.org/stevedore/stevedore-1.12.0.tar.gz
 Source0  : http://tarballs.openstack.org/stevedore/stevedore-1.12.0.tar.gz
 Summary  : Manage dynamic plugins for Python applications
@@ -16,7 +16,6 @@ BuildRequires : Pillow
 BuildRequires : Pygments
 BuildRequires : Sphinx-python
 BuildRequires : coverage-python
-BuildRequires : debtcollector-python
 BuildRequires : discover-python
 BuildRequires : docutils-python
 BuildRequires : extras
@@ -26,14 +25,12 @@ BuildRequires : funcsigs-python
 BuildRequires : linecache2-python
 BuildRequires : markupsafe-python
 BuildRequires : mox3-python
-BuildRequires : os-client-config-python
 BuildRequires : oslosphinx-python
 BuildRequires : oslotest-python
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : py-python
-BuildRequires : pyrsistent-python
 BuildRequires : pytest
 BuildRequires : python-dev
 BuildRequires : python-mimeparse-python
