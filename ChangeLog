@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+1.14.0
+------
+
+* Trivial: ignore openstack/common in flake8 exclude list
+
+1.13.0
+------
+
+* dont claim copyright for future years
+
 1.12.0
 ------
 
@@ -91,7 +101,7 @@ CHANGES
 1.2.0
 -----
 
-* Use pkg_resources resolve(
+* Use pkg_resources resolve() and require() instead of load()
 * Fix the README.rst file format for pypi
 * Workflow documentation is now in infra-manual
 * Implement a __contains__ override for extension manager
