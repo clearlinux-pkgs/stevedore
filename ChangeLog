@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+1.16.0
+------
+
+* Fix NamedExtensionManager fails when loading failing extension in order
+* Remove irrelated output item
+* Fix broken link about setuptools entry points
+* NamedExtensionManager: call a callback when some names cannot be found
+* Updated from global requirements
+
 1.15.0
 ------
 
