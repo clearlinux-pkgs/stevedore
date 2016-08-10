@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+1.17.0
+------
+
+* Remove discover from test-requirements
+* make error reporting for extension loading quieter
+* Add Python 3.5 classifier and venv
+* Replace assertEquals() with assertEqual()
+
 1.16.0
 ------
 
