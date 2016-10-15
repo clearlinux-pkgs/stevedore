@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+1.17.1
+------
+
+* do not emit warnings for missing hooks
+
 1.17.0
 ------
 
