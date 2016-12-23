@@ -4,7 +4,7 @@
 #
 Name     : stevedore
 Version  : 1.18.0
-Release  : 32
+Release  : 33
 URL      : http://tarballs.openstack.org/stevedore/stevedore-1.18.0.tar.gz
 Source0  : http://tarballs.openstack.org/stevedore/stevedore-1.18.0.tar.gz
 Summary  : Manage dynamic plugins for Python applications
