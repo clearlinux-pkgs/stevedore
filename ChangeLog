@@ -1,6 +1,29 @@
 CHANGES
 =======
 
+1.20.0
+------
+
+* extension: add entry_point_names method
+* extension: expose _find_entry_points as list_entry_points
+* Allow suppression of warnings from DriverManager
+* Show team and repo badges on README
+* Add Constraints support
+
+1.19.1
+------
+
+* Broken link at stevedore developer documentation
+
+1.19.0
+------
+
+* Add Apache 2.0 license to source file
+* Updated from global requirements
+* Add reno for release notes management
+* Updated from global requirements
+* Remove reference to non-existing page
+
 1.18.0
 ------
 
