@@ -6,7 +6,7 @@
 #
 Name     : stevedore
 Version  : 1.20.0
-Release  : 36
+Release  : 37
 URL      : http://tarballs.openstack.org/stevedore/stevedore-1.20.0.tar.gz
 Source0  : http://tarballs.openstack.org/stevedore/stevedore-1.20.0.tar.gz
 Source99 : http://tarballs.openstack.org/stevedore/stevedore-1.20.0.tar.gz.asc
@@ -16,6 +16,7 @@ License  : Apache-2.0
 Requires: stevedore-python
 Requires: Pillow
 Requires: Sphinx
+Requires: oslotest
 Requires: pbr
 Requires: six
 BuildRequires : Babel-python
@@ -76,7 +77,7 @@ python components for the stevedore package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489018842
+export SOURCE_DATE_EPOCH=1489019235
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -86,7 +87,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test
 %install
-export SOURCE_DATE_EPOCH=1489018842
+export SOURCE_DATE_EPOCH=1489019235
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
