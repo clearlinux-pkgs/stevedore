@@ -6,7 +6,7 @@
 #
 Name     : stevedore
 Version  : 1.20.0
-Release  : 35
+Release  : 36
 URL      : http://tarballs.openstack.org/stevedore/stevedore-1.20.0.tar.gz
 Source0  : http://tarballs.openstack.org/stevedore/stevedore-1.20.0.tar.gz
 Source99 : http://tarballs.openstack.org/stevedore/stevedore-1.20.0.tar.gz.asc
@@ -14,11 +14,16 @@ Summary  : Manage dynamic plugins for Python applications
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: stevedore-python
+Requires: Pillow
+Requires: Sphinx
+Requires: pbr
+Requires: six
 BuildRequires : Babel-python
 BuildRequires : Jinja2
 BuildRequires : Pillow
 BuildRequires : Pygments
 BuildRequires : Sphinx-python
+BuildRequires : configparser-python
 BuildRequires : coverage-python
 BuildRequires : discover-python
 BuildRequires : docutils-python
@@ -29,7 +34,7 @@ BuildRequires : linecache2-python
 BuildRequires : markupsafe-python
 BuildRequires : mox3-python
 BuildRequires : oslosphinx-python
-BuildRequires : oslotest-python
+BuildRequires : oslotest
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : pluggy
@@ -40,7 +45,6 @@ BuildRequires : python-mimeparse-python
 BuildRequires : python-mock
 BuildRequires : python-subunit
 BuildRequires : python3-dev
-BuildRequires : pytz-python
 BuildRequires : requests-python
 BuildRequires : setuptools
 BuildRequires : six
@@ -62,7 +66,6 @@ stevedore -- Manage dynamic plugins for Python applications
 %package python
 Summary: python components for the stevedore package.
 Group: Default
-Requires: six-python
 
 %description python
 python components for the stevedore package.
@@ -73,7 +76,7 @@ python components for the stevedore package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487206498
+export SOURCE_DATE_EPOCH=1489018842
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -83,7 +86,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test
 %install
-export SOURCE_DATE_EPOCH=1487206498
+export SOURCE_DATE_EPOCH=1489018842
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

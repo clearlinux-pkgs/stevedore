@@ -4,7 +4,7 @@ Babel-python
 six-python
 six
 oslosphinx-python
-oslotest-python
+oslotest
 discover-python
 testrepository-python
 coverage-python
