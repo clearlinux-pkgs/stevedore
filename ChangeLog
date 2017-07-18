@@ -1,6 +1,37 @@
 CHANGES
 =======
 
+1.25.0
+------
+
+* Update URLs in documents according to document migration
+
+1.24.0
+------
+
+* switch from oslosphinx to openstackdocstheme
+* turn on warning-is-error for doc build
+* move documentation into the new standard layout
+* Updated from global requirements
+* fix setuptools url
+
+1.23.0
+------
+
+* Updated from global requirements
+* Remove 'run\_sphinx' script
+* Remove unused doc/requirements.txt
+* Mark as Production/Stable instead of Alpha
+
+1.22.0
+------
+
+* Remove oslotest from test-requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Update reno for stable/ocata
+
 1.21.0
 ------
 
@@ -12,8 +43,8 @@ CHANGES
 1.20.0
 ------
 
-* extension: add entry_point_names method
-* extension: expose _find_entry_points as list_entry_points
+* extension: add entry\_point\_names method
+* extension: expose \_find\_entry\_points as list\_entry\_points
 * Allow suppression of warnings from DriverManager
 * Show team and repo badges on README
 * Add Constraints support
@@ -78,7 +109,7 @@ CHANGES
 1.12.0
 ------
 
-* Add a reference to entry_point_inspector
+* Add a reference to entry\_point\_inspector
 
 1.11.0
 ------
@@ -131,7 +162,7 @@ CHANGES
 1.6.0
 -----
 
-* Document the signature for check_func
+* Document the signature for check\_func
 * Updated from global requirements
 * Switch badges from 'pypip.in' to 'shields.io'
 * Remove unnecessary openstack-common.conf
@@ -143,7 +174,7 @@ CHANGES
 * Add sphinx integration
 * Updated from global requirements
 * Fix Python versions supported
-* Remove run_cross_tests.sh
+* Remove run\_cross\_tests.sh
 * fix author contact details
 * re-raise exception with full traceback
 
@@ -165,10 +196,10 @@ CHANGES
 1.2.0
 -----
 
-* Use pkg_resources resolve() and require() instead of load()
+* Use pkg\_resources resolve() and require() instead of load()
 * Fix the README.rst file format for pypi
 * Workflow documentation is now in infra-manual
-* Implement a __contains__ override for extension manager
+* Implement a \_\_contains\_\_ override for extension manager
 * Update link to docs in README
 * Bring doc build up to standard
 
@@ -195,11 +226,11 @@ CHANGES
 * Fix incorrect image reference in documentation
 * Fix requirement handling in tox
 * Updated from global requirements
-* use six.add_metaclass
+* use six.add\_metaclass
 * Updated from global requirements
 * driver: raise by default on import failure
 * Add doc requirements to venv environ
-* Import run_cross_tests.sh from oslo-incubator
+* Import run\_cross\_tests.sh from oslo-incubator
 * fix link to entry point docs
 
 0.15
@@ -223,9 +254,9 @@ CHANGES
 * Remove requirements checking for dependencies
 * fix typo in contrib docs
 * Add contributing instructions for github mirrors
-* Allow a on_load_failure_callback to be provided
+* Allow a on\_load\_failure\_callback to be provided
 * Add venv environment to tox
-* driver: remove useless arg propagate_map_exceptions
+* driver: remove useless arg propagate\_map\_exceptions
 * Move to stackforge
 * update release announcement file
 * update release number in history
@@ -256,7 +287,7 @@ CHANGES
 * remove version from setup.cfg and rely on git tag
 * Switch to pbr
 * Fix flake8 failures from pull/27
-* Add map_method function to managers
+* Add map\_method function to managers
 * Fixes reporting the error when drivers have the same name
 
 0.11
@@ -300,11 +331,11 @@ CHANGES
 * Add PyCon 2013 essay
 * Update docs for NameDispatchExtensionManager
 * Clean up autodoc for manager classes
-* Add ExtensionManager.__getitem__
+* Add ExtensionManager.\_\_getitem\_\_
 * Change sort for NamedExtensionManager
 * Ignore missing extensions in named dispatch
 * Set up extlinks extension
-* document new name_order param in history
+* document new name\_order param in history
 * Correct argument types in name sort tests
 * fix type definition of names parameter
 * optionally sort named extensions
@@ -363,7 +394,7 @@ CHANGES
 * Set up logging in enabled module
 * Log the full exception when plugin load fails
 * Optimize implementation of NameDispatchExtensionManager
-* Add response callback to _invoke_one_plugin()
+* Add response callback to \_invoke\_one\_plugin()
 * Refactor code for invoking plugins from map()
 * clean up formatting
 
