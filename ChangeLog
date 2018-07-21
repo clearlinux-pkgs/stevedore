@@ -1,6 +1,56 @@
 CHANGES
 =======
 
+1.29.0
+------
+
+* Remove unnecessary py27 testenv
+* Switch to stestr
+* fix tox python3 overrides
+* Trivial: Update pypi url to new url
+* Trivial: Update pypi url to new url
+* set default python to python3
+* add lower-constraints job
+* Updated from global requirements
+* Update links in README
+* Update reno for stable/queens
+* Updated from global requirements
+* Updated from global requirements
+* Follow the new PTI for document build
+
+1.28.0
+------
+
+* Updated from global requirements
+* Remove -U from pip install
+* Avoid tox\_install.sh for constraints support
+* add bandit to pep8 job
+* move doc requirements to doc/requirements.txt
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+
+1.27.1
+------
+
+* Move reno to optional docs requirements
+* Remove duplicate optional requirement
+
+1.27.0
+------
+
+* Updated from global requirements
+
+1.26.0
+------
+
+* Updated from global requirements
+* Remove Pillow from test-requirements
+* Make openstackdocstheme an optional doc dependency
+* Updated from global requirements
+* Add an ExtensionManager.items() method
+* Update reno for stable/pike
+* Updated from global requirements
+
 1.25.0
 ------
 
