@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+1.30.0
+------
+
+* Update sphinx logging to not use app object
+* Removed older version of python added 3.5
+* Update doc/conf.py to avoid warnings with sphinx 1.8
+* add lib-forward-testing-python3 test job
+* fix wrong link
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* Update reno for stable/rocky
+
 1.29.0
 ------
 
