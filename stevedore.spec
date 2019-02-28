@@ -5,27 +5,26 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : stevedore
-Version  : 1.30.0
-Release  : 47
-URL      : http://tarballs.openstack.org/stevedore/stevedore-1.30.0.tar.gz
-Source0  : http://tarballs.openstack.org/stevedore/stevedore-1.30.0.tar.gz
-Source99 : http://tarballs.openstack.org/stevedore/stevedore-1.30.0.tar.gz.asc
+Version  : 1.30.1
+Release  : 48
+URL      : http://tarballs.openstack.org/stevedore/stevedore-1.30.1.tar.gz
+Source0  : http://tarballs.openstack.org/stevedore/stevedore-1.30.1.tar.gz
+Source99 : http://tarballs.openstack.org/stevedore/stevedore-1.30.1.tar.gz.asc
 Summary  : Manage dynamic plugins for Python applications
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: stevedore-license = %{version}-%{release}
 Requires: stevedore-python = %{version}-%{release}
 Requires: stevedore-python3 = %{version}-%{release}
-Requires: openstackdocstheme
 Requires: pbr
-Requires: reno
 Requires: six
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
 %description
+===========================================================
 stevedore -- Manage dynamic plugins for Python applications
-        ===========================================================
+===========================================================
 
 %package license
 Summary: license components for the stevedore package.
@@ -54,14 +53,15 @@ python3 components for the stevedore package.
 
 
 %prep
-%setup -q -n stevedore-1.30.0
+%setup -q -n stevedore-1.30.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1540495367
+export SOURCE_DATE_EPOCH=1551397691
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
