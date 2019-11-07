@@ -6,7 +6,7 @@
 #
 Name     : stevedore
 Version  : 1.31.0
-Release  : 51
+Release  : 52
 URL      : http://tarballs.openstack.org/stevedore/stevedore-1.31.0.tar.gz
 Source0  : http://tarballs.openstack.org/stevedore/stevedore-1.31.0.tar.gz
 Source1 : http://tarballs.openstack.org/stevedore/stevedore-1.31.0.tar.gz.asc
