@@ -26,6 +26,7 @@ python-magnumclient
 python-mistralclient
 python-zaqarclient
 sahara
+subunit2sql
 taskflow
 tempest
 tooz

@@ -6,7 +6,7 @@
 #
 Name     : stevedore
 Version  : 1.32.0
-Release  : 54
+Release  : 55
 URL      : http://tarballs.openstack.org/stevedore/stevedore-1.32.0.tar.gz
 Source0  : http://tarballs.openstack.org/stevedore/stevedore-1.32.0.tar.gz
 Source1  : http://tarballs.openstack.org/stevedore/stevedore-1.32.0.tar.gz.asc
@@ -26,6 +26,30 @@ BuildRequires : six
 ===========================================================
 stevedore -- Manage dynamic plugins for Python applications
 ===========================================================
+
+.. image:: https://img.shields.io/pypi/v/stevedore.svg
+    :target: https://pypi.org/project/stevedore/
+    :alt: Latest Version
+
+.. image:: https://governance.openstack.org/tc/badges/stevedore.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+Python makes loading code dynamically easy, allowing you to configure
+and extend your application by discovering and loading extensions
+("*plugins*") at runtime. Many applications implement their own
+library for doing this, using ``__import__`` or ``importlib``.
+stevedore avoids creating yet another extension
+mechanism by building on top of `setuptools entry points`_. The code
+for managing entry points tends to be repetitive, though, so stevedore
+provides manager classes for implementing common patterns for using
+dynamically loaded extensions.
+
+.. _setuptools entry points: http://setuptools.readthedocs.io/en/latest/pkg_resources.html?#entry-points
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/stevedore/latest
+* Source: https://opendev.org/openstack/stevedore
+* Bugs: https://bugs.launchpad.net/python-stevedore
 
 %package license
 Summary: license components for the stevedore package.
@@ -48,6 +72,7 @@ python components for the stevedore package.
 Summary: python3 components for the stevedore package.
 Group: Default
 Requires: python3-core
+Provides: pypi(stevedore)
 
 %description python3
 python3 components for the stevedore package.
@@ -62,7 +87,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581451032
+export SOURCE_DATE_EPOCH=1582915218
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
