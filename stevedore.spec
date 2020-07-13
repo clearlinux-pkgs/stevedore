@@ -5,17 +5,18 @@
 # Source0 file verified with key 0xC12B8E73B30F2FC8 (infra-root@openstack.org)
 #
 Name     : stevedore
-Version  : 2.0.1
-Release  : 57
-URL      : http://tarballs.openstack.org/stevedore/stevedore-2.0.1.tar.gz
-Source0  : http://tarballs.openstack.org/stevedore/stevedore-2.0.1.tar.gz
-Source1  : http://tarballs.openstack.org/stevedore/stevedore-2.0.1.tar.gz.asc
+Version  : 3.0.0
+Release  : 58
+URL      : http://tarballs.openstack.org/stevedore/stevedore-3.0.0.tar.gz
+Source0  : http://tarballs.openstack.org/stevedore/stevedore-3.0.0.tar.gz
+Source1  : http://tarballs.openstack.org/stevedore/stevedore-3.0.0.tar.gz.asc
 Summary  : Manage dynamic plugins for Python applications
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: stevedore-license = %{version}-%{release}
 Requires: stevedore-python = %{version}-%{release}
 Requires: stevedore-python3 = %{version}-%{release}
+Requires: importlib_metadata
 Requires: pbr
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
@@ -53,15 +54,15 @@ python3 components for the stevedore package.
 
 
 %prep
-%setup -q -n stevedore-2.0.1
-cd %{_builddir}/stevedore-2.0.1
+%setup -q -n stevedore-3.0.0
+cd %{_builddir}/stevedore-3.0.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1592855432
+export SOURCE_DATE_EPOCH=1594613863
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -74,7 +75,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/stevedore
-cp %{_builddir}/stevedore-2.0.1/LICENSE %{buildroot}/usr/share/package-licenses/stevedore/2b8b815229aa8a61e483fb4ba0588b8b6c491890
+cp %{_builddir}/stevedore-3.0.0/LICENSE %{buildroot}/usr/share/package-licenses/stevedore/2b8b815229aa8a61e483fb4ba0588b8b6c491890
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
