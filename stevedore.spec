@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xC12B8E73B30F2FC8 (infra-root@openstack.org)
 #
 Name     : stevedore
-Version  : 3.0.0
-Release  : 58
-URL      : http://tarballs.openstack.org/stevedore/stevedore-3.0.0.tar.gz
-Source0  : http://tarballs.openstack.org/stevedore/stevedore-3.0.0.tar.gz
-Source1  : http://tarballs.openstack.org/stevedore/stevedore-3.0.0.tar.gz.asc
+Version  : 3.1.0
+Release  : 59
+URL      : http://tarballs.openstack.org/stevedore/stevedore-3.1.0.tar.gz
+Source0  : http://tarballs.openstack.org/stevedore/stevedore-3.1.0.tar.gz
+Source1  : http://tarballs.openstack.org/stevedore/stevedore-3.1.0.tar.gz.asc
 Summary  : Manage dynamic plugins for Python applications
 Group    : Development/Tools
 License  : Apache-2.0
@@ -19,6 +19,7 @@ Requires: stevedore-python3 = %{version}-%{release}
 Requires: importlib_metadata
 Requires: pbr
 BuildRequires : buildreq-distutils3
+BuildRequires : oslotest
 BuildRequires : pbr
 
 %description
@@ -54,15 +55,15 @@ python3 components for the stevedore package.
 
 
 %prep
-%setup -q -n stevedore-3.0.0
-cd %{_builddir}/stevedore-3.0.0
+%setup -q -n stevedore-3.1.0
+cd %{_builddir}/stevedore-3.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1594613863
+export SOURCE_DATE_EPOCH=1594663621
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -75,7 +76,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/stevedore
-cp %{_builddir}/stevedore-3.0.0/LICENSE %{buildroot}/usr/share/package-licenses/stevedore/2b8b815229aa8a61e483fb4ba0588b8b6c491890
+cp %{_builddir}/stevedore-3.1.0/LICENSE %{buildroot}/usr/share/package-licenses/stevedore/2b8b815229aa8a61e483fb4ba0588b8b6c491890
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
