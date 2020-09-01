@@ -4,6 +4,7 @@ castellan
 cinder
 cliff
 doc8
+dogpile.cache
 glance_store
 ironic
 keystone
@@ -23,6 +24,7 @@ python-designateclient
 python-keystoneclient
 python-magnumclient
 python-mistralclient
+python-novaclient
 python-openstackclient
 python-zaqarclient
 subunit2sql
