@@ -6,7 +6,7 @@
 #
 Name     : stevedore
 Version  : 3.2.2
-Release  : 62
+Release  : 63
 URL      : http://tarballs.openstack.org/stevedore/stevedore-3.2.2.tar.gz
 Source0  : http://tarballs.openstack.org/stevedore/stevedore-3.2.2.tar.gz
 Source1  : http://tarballs.openstack.org/stevedore/stevedore-3.2.2.tar.gz.asc
